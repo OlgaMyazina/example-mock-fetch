@@ -5,11 +5,9 @@ async function convertFetch(base, destination) {
     `https://api.exchangeratesapi.io/latest?base=${base}`
   );
   if (!result.ok) {
-    console.log('not ok')
     throw new Error(`Request failed with status code ${result.status}`);
   }
   const data = await result.json();
-  console.log({data}, data.rates[destination])
   return data.rates[destination];
 }
 

@@ -10,7 +10,6 @@ export default function App() {
     const fetchData = async () => {
       try {
         const rateData = await convert(base, dest);
-        console.log({rateData})
         setRate(rateData);
       } catch(e){
         setError(e)

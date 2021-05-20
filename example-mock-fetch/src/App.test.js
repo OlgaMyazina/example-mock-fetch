@@ -1,10 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-//import { SWRConfig, cache } from "swr";
 import App from "./App";
 import { server, rest } from "./testServer";
 
-//afterEach(() => cache.clear());
 
 test("renders learn react link", async () => {
   const { findByText } = render(
